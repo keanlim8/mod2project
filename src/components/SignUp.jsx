@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router'
 import { firebaseApp } from '../firebase'
 
 class SignUp extends Component {
@@ -15,14 +16,13 @@ class SignUp extends Component {
     const { email, password } = this.state
     firebaseApp.auth().createUserWithEmailAndPassword(email, password)
       .catch(error => {
-        console.log('error', error)
         this.setState({error})
       })
   }
   render(){
     return(
       <div className="form-inline" style={{margin:'5%'}}>
-        <h2>SignUp</h2>
+        <h2>Sign Up</h2>
           <div className="form-group">
             <input
               className="form-control"
@@ -47,6 +47,7 @@ class SignUp extends Component {
             </button>
           </div>
           <div>{this.state.error.message}</div>
+          <div><Link to={'/signin'}>Already signed up? Please sign in</Link></div>
       </div>
     )
   }
