@@ -10,7 +10,7 @@ class AddToDo extends Component {
   addToDo(){
     console.log('this', this)
     const { title } = this.state
-    const { email } = this.props
+    const { email } = this.props.user
     todoRef.push({email, title})
   }
 
@@ -39,9 +39,10 @@ class AddToDo extends Component {
   }
 }
 function mapStateToProps(state){
-  const { email } = state
+  const { user } = state
+  console.log('state in AddToDo.jsx', state)
   return {
-    email
+    user
   }
 }
 export default connect(mapStateToProps, null)(AddToDo)
