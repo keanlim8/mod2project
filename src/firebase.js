@@ -12,3 +12,4 @@ const firebaseConfig = {
 }
 
 export const firebaseApp = firebase.initializeApp(firebaseConfig)
+export const todoRef = firebase.database().ref('to-dos')
