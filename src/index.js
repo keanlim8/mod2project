@@ -1,11 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './index.css'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, browserHistory} from 'react-router'
 import { firebaseApp } from './firebase'
 import { logUser } from './actions'
 import reducer from './reducers'
+
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
+import ru from 'javascript-time-ago/locale/ru'
 
 import App from './components/App'
 import SignIn from './components/SignIn'
@@ -24,6 +29,9 @@ firebaseApp.auth().onAuthStateChanged(user => {
     browserHistory.replace('/signin')
   }
 })
+
+TimeAgo.addDefaultLocale(en)
+TimeAgo.addLocale(ru)
 
 ReactDOM.render(
   <Provider store={store}>

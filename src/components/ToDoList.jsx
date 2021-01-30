@@ -24,7 +24,6 @@ class ToDoList extends Component {
       {
         this.props.todos.map((todo, index) => {
           return (
-            // <div key={index}>{todo.title}</div>
             <ToDoItem key={index} todo={todo} />
           )
         })

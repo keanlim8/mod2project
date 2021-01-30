@@ -20,20 +20,20 @@ class AddToDo extends Component {
         <div className="form-group">
           <input
           type="text"
-          placeholder="add a to-do"
+          placeholder="Add a to-do"
           className="form-control"
-          style={{marginRight: '5px'}}
+          style={{marginTop: '5px', marginRight: '10px', width:'70%'}}
           onChange={event => this.setState({title: event.target.value})}
           />
           <button
-          className="btn btn-success"
+          className="btn btn-info"
           type="button"
+          style={{marginTop: '5px'}}
           onClick={() => this.addToDo()}
           >
           Submit
           </button>
         </div>
-
       </div>
     )
   }

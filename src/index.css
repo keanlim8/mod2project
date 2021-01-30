@@ -1,0 +1,32 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/*================================================================================================
+===========================================CARD CONTAINER=========================================
+================================================================================================*/
+.card {
+  padding: 20px;
+  margin: auto;
+  position: flex;
+  margin-top: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+  .card{
+    min-width: 90%;
+    display: block;
+    margin-top: 60px;
+  }
+}

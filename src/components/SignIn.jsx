@@ -21,7 +21,7 @@ class SignIn extends Component {
   }
   render(){
     return(
-      <div className="form-inline" style={{margin:'5%'}}>
+      <div className="card">
         <h2>Sign In</h2>
           <div className="form-group">
             <input
@@ -34,20 +34,21 @@ class SignIn extends Component {
             <input
               className="form-control"
               type="password"
-              style={{marginRight: '5px'}}
+              style={{marginRight: '5px', marginTop: '5px'}}
               placeholder="password"
               onChange={event => this.setState({password: event.target.value })}
             />
             <button
-              className="btn btn-primary"
+              className="btn btn-dark"
               type="button"
+              style={{marginTop: '5px'}}
               onClick={() => this.signIn()}
             >
             Sign In
             </button>
           </div>
           <div>{this.state.error.message}</div>
-          <div><Link to={'/signup'}>Please Sign Up</Link></div>
+          <div><Link to={'/signup'}>Sign Up Here</Link></div>
       </div>
     )
   }

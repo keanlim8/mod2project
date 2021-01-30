@@ -21,26 +21,27 @@ class SignUp extends Component {
   }
   render(){
     return(
-      <div className="form-inline" style={{margin:'5%'}}>
+      <div className="card">
         <h2>Sign Up</h2>
           <div className="form-group">
             <input
               className="form-control"
               type="text"
-              style={{marginRight: '5px'}}
+              style={{marginRight: '5px', marginTop: '5px'}}
               placeholder="email"
               onChange={event => this.setState({email: event.target.value})}
             />
             <input
               className="form-control"
               type="password"
-              style={{marginRight: '5px'}}
+              style={{marginRight: '5px', marginTop: '5px'}}
               placeholder="password"
               onChange={event => this.setState({password: event.target.value })}
             />
             <button
               className="btn btn-primary"
               type="button"
+              style={{marginTop: '5px'}}
               onClick={() => this.signUp()}
             >
             Sign Up
