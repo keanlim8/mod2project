@@ -40,6 +40,7 @@ class CompleteToDoList extends Component {
       }
       <button
       className="btn btn-warning"
+      style={{margin: '8px'}}
       onClick={()=>this.clearCompleted()}
       >
       Clear
