@@ -10,21 +10,24 @@ class ToDoList extends Component {
       let todos = []
       snap.forEach(todo => {
         const { email, title } = todo.val()
-        todos.push({email, title})
+        const serverKey = todo.key
+        todos.push({email, title, serverKey})
+        // console.log('todo', todo)
       })
-      console.log('todos', todos)
       this.props.setTodos(todos)
     })
   }
 
   render(){
-    console.log('this.props.todos', this.props.todos)
+    // console.log('this.props.todos', this.props.todos)
     return(
       <div>
       {
         this.props.todos.map((todo, index) => {
           return (
-            <ToDoItem key={index} todo={todo} />
+            <ToDoItem key={index}
+                      todo={todo}
+            />
           )
         })
       }

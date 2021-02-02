@@ -1,18 +1,38 @@
 import React, { Component } from 'react'
-import ReactTimeAgo from 'react-time-ago'
+import { connect } from 'react-redux'
+import { completeToDoRef, todoRef } from '../firebase'
 
 class ToDoItem extends Component {
-  render(){
-    console.log('this.props.todo', this.props.todo)
-    const { email, title} = this.props.todo
+  completeToDo(){
+    const { email } = this.props.user
+    const { title, serverKey } = this.props.todo
+    console.log('serverKey', serverKey)
+    todoRef.child(serverKey).remove()
+    completeToDoRef.push({email, title})
+  }
 
+  render(){
+    // console.log('this.props.todo', this.props.todo)
+    const { email, title} = this.props.todo
     return(
-      <div style={{margin: '10px'}}>
+      <div className='card2'><li>
         <strong>{title}</strong>
-        <span> submitted by <em>{email}</em></span>
+        <span style={{marginRight: '5px'}}> submitted by <em>{email}</em></span></li>
+          <button className="btn btn-sm btn-success"
+                  onClick={() => this.completeToDo()}
+          >
+          Complete
+          </button>
       </div>
     )
   }
 }
 
-export default ToDoItem
+function mapStateToProps(state) {
+  const { user } = state
+  return {
+    user
+  }
+}
+
+export default connect(mapStateToProps, null)(ToDoItem)

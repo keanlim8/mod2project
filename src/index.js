@@ -35,6 +35,7 @@ TimeAgo.addLocale(ru)
 
 ReactDOM.render(
   <Provider store={store}>
+
     <Router path="/" history={browserHistory}>
       <Route path="/app" component={App} />
       <Route path="/signin" component={SignIn} />

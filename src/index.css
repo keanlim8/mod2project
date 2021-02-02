@@ -1,28 +1,68 @@
 body {
-  min-height: 100vh;
   margin: 0;
+  background: url("https://i.ibb.co/sVsBwkQ/pexels-eva-elijas-5988420.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: scroll;
   line-height: 1.6;
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
+h2 {
+  text-align: center;
+}
 /*================================================================================================
 ===========================================CARD CONTAINER=========================================
 ================================================================================================*/
 .card {
+  background-color: #FFF77F;
   padding: 20px;
   margin: auto;
   position: flex;
   margin-top: 10%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transition: 0.3s;
   width: 60%;
   border-radius: 5px;
 }
 
+.card2 {
+  background-color: pink;
+  padding: 8px;
+  position: flex;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  width: 96%;
+  border-radius: 5px;
+}
+
+.card3 {
+  background-color: #98EAF7;
+  padding: 8px;
+  position: flex;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  width: 96%;
+  border-radius: 5px;
+}
+
 .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+}
+
+.card2:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
+.card3:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
 @media screen and (max-width: 600px) {
   .card{
     min-width: 90%;

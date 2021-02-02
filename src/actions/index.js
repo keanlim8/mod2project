@@ -1,4 +1,4 @@
-import { SIGNED_IN, SET_TODOS } from '../constants'
+import { SIGNED_IN, SET_TODOS, SET_COMPLETED } from '../constants'
 
 export function logUser(email){
   const action = {
@@ -12,6 +12,14 @@ export function setTodos(todos){
   const action = {
     type: SET_TODOS,
     todos
+  }
+  return action
+}
+
+export function setCompleted(completeToDos) {
+  const action = {
+    type: SET_COMPLETED,
+    completeToDos
   }
   return action
 }
