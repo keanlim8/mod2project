@@ -1,5 +1,5 @@
 # Mini Trello Board
-Mini Trello Board is essentially a to-do application for organizing your work and life. Tasks can be managed, tracked, and shared with other users.
+Mini Trello Board is essentially a to-do application for organizing your work and life. Tasks can be managed, tracked, and shared with other teammates. The card tells you what's being worked on, who's working on what, and where something is in a process. Imagine a cork board, filled with lists of sticky notes, with each note as a task for you and your team.
 
 ## Demo
 ![Mini Trello Board Demo](demo/demo.gif)
