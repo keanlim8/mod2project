@@ -1,4 +1,7 @@
-# DEMO
+# Mini Trello Board
+Mini Trello Board is essentially a to-do application for organizing your work and life. Tasks can be managed, tracked, and shared with other users.
+
+## Demo
 ![Mini Trello Board Demo](demo/demo.gif)
 
 ## Available Scripts
